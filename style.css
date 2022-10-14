@@ -1,5 +1,12 @@
 @import url(https://fonts.bunny.net/css?family=darker-grotesque);
 
+:root {
+	--line-border-color: #A53860;
+	--disabled-line-border: #D1D2D4;
+	--button-hover-color: #830A48;
+	--text-color: #868991;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -37,7 +44,7 @@ body {
 }
 
 .progress-container::before {
-	background-color: #D1D2D4;
+	background-color: var(--disabled-line-border);
 	content: "";
 	height: .4rem;
 	left: 0;
@@ -49,7 +56,7 @@ body {
 }
 
 .progress {
-	background-color: #A53860;
+	background-color: var(--line-border-color);
 	height: .4rem;
 	left: 0;
 	position: absolute;
@@ -64,9 +71,9 @@ body {
 .circle {
 	align-items: center;
 	background-color: #fff;
-	border: 3px solid #d1d2d4;
+	border: 3px solid var(--disabled-line-border);
 	border-radius: 50%;
-	color: #868991;
+	color: var(--text-color);
 	display: flex;
 	height: 3rem;
 	justify-content: center;
@@ -75,21 +82,21 @@ body {
 }
 
 .circle.active {
-	border: .4rem solid #a53860;
+	border-color: var(--line-border-color);
 }
 
 #prev[disabled], #prev[disabled]:hover {
-	background-color: #d1d2d4;
+	background-color: var(--disabled-line-border);
 	border-radius: .5rem;
 	border: none;
-	color: #868991;
+	color: var(--text-color);
 	font-size: 1.8rem;
 	margin: 0 .5rem;
 	padding: 1rem 2rem;
 }
 
 #next, #prev {
-	background-color: #a53860;
+	background-color: var(--line-border-color);
 	border-radius: .5rem;
 	border: none;
 	color: #fff;
@@ -100,5 +107,5 @@ body {
 }
 
 #next:hover, #prev:hover {
-	background-color: #830A48;
+	background-color: var(--button-hover-color);
 }
