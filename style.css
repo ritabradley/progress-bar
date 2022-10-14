@@ -12,7 +12,26 @@ html {
 }
 
 body {
+	align-items: center;
+	background-color: #EAEAEA;
+	display: flex;
 	font-family: "darker grotesque", sans-serif;
 	font-size: 1.6rem;
 	font-weight: 400;
+	justify-content: center;
+    min-height: 100vh;
+	overflow: hidden;
+}
+
+.container {
+	text-align: center;
+}
+
+.progress-container {
+	display: flex;
+    justify-content: space-between;
+	margin-bottom: 3rem;
+	max-width: 100vw;
+	position: relative;
+	width: 35rem;
 }
